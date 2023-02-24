@@ -61,39 +61,23 @@ async function run() {
       const result = await clientsCollection.deleteOne(query);
       res.send(result);
     });
-    // indivisual profile
 
-    // app.get("/profile/:email", async (req, res) => {
-    //   const email = req.params.email;
-    //   const user = await profileCollection.findOne({ email: email });
-    //   res.send(user);
-    // });
-
-    // get
-    // app.get("/posts/:id", async (req, res) => {
+    // PATCH;
+    // app.put("/client/:id", async (req, res) => {
     //   const id = req.params.id;
-    //   const query = { _id: id };
-    //   const post = await postCollection.findOne(query);
-    //   res.send(post);
-    // });
-
-    // PUT
-    // app.put("/profile/:email", async (req, res) => {
-    //   const email = req.params.email;
-    //   const filter = { email: email };
-    //   const profile = req.body;
+    //   const filter = { _id: id };
+    //   const client = req.body;
     //   const options = { upsert: true };
     //   const updateDoc = {
     //     $set: {
-    //       name: profile.name,
-    //       address: profile.address,
-    //       course: profile.course,
-    //       picture: profile.picture,
-    //       subject: profile.subject,
-    //       university: profile.university,
+    //       clientName: client.clientName,
+    //       contactPerson: client.contactPerson,
+    //       contactNumber: client.contactNumber,
+    //       mobileNumber: client.mobileNumber,
+    //       address: client.address,
     //     },
     //   };
-    //   const result = await profileCollection.updateMany(
+    //   const result = await clientsCollection.updateMany(
     //     filter,
     //     updateDoc,
     //     options
